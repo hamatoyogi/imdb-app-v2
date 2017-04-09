@@ -7,7 +7,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { Root } from './root/root';
 
 import styles from './App.css'
-Object.assign(styles, jumbotron, container, buttons)
+Object.assign(styles, jumbotron, container, buttons);
 
 @observer
 class App extends React.Component {

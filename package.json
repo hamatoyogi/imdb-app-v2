@@ -9,22 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tranqy/react-routing-mobx-bootstrap-boilerplate"
+    "url": "https://github.com/hamatoyogi/imdb-app-v2"
   },
-  "keywords": [
-    "React",
-    "Webpack",
-    "Babel",
-    "Starter",
-    "template"
-  ],
-  "author": "Aaron Junod",
-  "license": "MIT",
+  "author": "YG",
   "bugs": {
-    "url": "https://github.com/tranqy/react-routing-mobx-bootstrap-boilerplate"
+    "url": "https://github.com/hamatoyogi/imdb-app-v2"
   },
-  "homepage": "https://github.com/tranqy/react-routing-mobx-bootstrap-boilerplate#readme",
   "dependencies": {
+    "lodash": "^4.17.4",
     "material-ui": "^0.17.2",
     "mobx": "^2.3.5",
     "mobx-react": "^3.5.0",

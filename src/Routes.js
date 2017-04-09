@@ -5,7 +5,7 @@ import App from './components/App'
 
 export default(store) => {
 	return (
-		<Route path="/" component={ App } guestStore={store}>
+		<Route path="/" component={ App } store={store}>
 			<IndexRoute component={ App }/>
 		</Route>
 	)
