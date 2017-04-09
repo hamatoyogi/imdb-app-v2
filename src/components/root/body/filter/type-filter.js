@@ -1,14 +1,51 @@
-import React from 'react';
+import React, { Component } from 'react';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import { dataStore } from '../../../../stores/data-store';
 
-export const TypeFilter = ({ types }) => {
-  const { data } = dataStore;
-  console.log('%c This is data: ','background:black; color:red;', data);
+const names = [
+  'Oliver Hansen',
+  'Van Henry',
+  'April Tucker',
+  'Ralph Hubbard',
+  'Omar Alexander',
+  'Carlos Abbott',
+  'Miriam Wagner',
+  'Bradley Wilkerson',
+  'Virginia Andrews',
+  'Kelly Snyder',
+];
 
-  return (
-    <div>
-    </div>
-  )
+export class TypeFilter extends Component {
+  state = {
+    values: [],
+  };
+
+  handleChange = (event, index, values) => this.setState({values});
+
+  menuItems(values) {
+    return names.map((name) => (
+      <MenuItem
+        key={name}
+        insetChildren={true}
+        checked={values && values.includes(name)}
+        value={name}
+        primaryText={name}
+      />
+    ));
+  }
+
+  render() {
+    const {values} = this.state;
+    return (
+      <SelectField
+        multiple={true}
+        hintText="Select a name"
+        value={values}
+        onChange={this.handleChange}
+      >
+        {this.menuItems(values)}
+      </SelectField>
+    );
+  }
 }

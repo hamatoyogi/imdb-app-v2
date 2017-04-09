@@ -24,10 +24,10 @@ export class ReleaseDateFilter extends React.Component {
     return mockYearList.map((year) => (
       <MenuItem
         key={year}
-        insetChildren={true}
-        checked={values && values.includes(year)}
-        value={year}
-        primaryText={year}
+        insetChildren={ true }
+        checked={ values && values.includes(year) }
+        value={ year }
+        primaryText={ year }
       />
     ));
   }
@@ -40,24 +40,21 @@ export class ReleaseDateFilter extends React.Component {
       return null;
     }
 
-    console.log('%c This is data: ', 'background:black; color:red;', data);
-
     const releaseDates = _.map(data.search, (movie) => {
       return movie.year;
     });
-    console.log('%c This is releaseDates: ', 'background:black; color:red;', releaseDates);
 
     const selectFieldProps = {
       multiple: true,
       hintText: "Select a year",
-      values,
+      values: mockYearList,
       onChange: this.handleChange,
     };
 
     return (
       <div>
         <SelectField { ...selectFieldProps }>
-          {this.menuItems(values)}
+          { this.menuItems(values) }
         </SelectField>
       </div>
     )
