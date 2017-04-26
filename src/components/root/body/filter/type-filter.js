@@ -36,14 +36,22 @@ export class TypeFilter extends Component {
   }
 
   render() {
-    const {values} = this.state;
+    const { data } = dataStore;
+    const { values } = this.state;
+
+    if (!data) {
+      return null;
+    }
+
+    const selectFieldProps = {
+      multiple: true,
+      hintText: "Select a name",
+      values: names,
+      onChange: this.handleChange,
+    };
+
     return (
-      <SelectField
-        multiple={true}
-        hintText="Select a name"
-        value={values}
-        onChange={this.handleChange}
-      >
+      <SelectField { ...selectFieldProps }>
         {this.menuItems(values)}
       </SelectField>
     );

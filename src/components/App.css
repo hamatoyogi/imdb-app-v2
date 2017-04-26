@@ -5,3 +5,11 @@
 .appHeading {
   composes: jumbotron from "bootstrap-css/lib/jumbotron.css"
 }
+
+header {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  color: darkgoldenrod;
+  margin: 30px;
+}

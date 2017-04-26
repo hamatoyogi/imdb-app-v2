@@ -40,8 +40,8 @@ export class ReleaseDateFilter extends React.Component {
       return null;
     }
 
-    const releaseDates = _.map(data.search, (movie) => {
-      return movie.year;
+    const releaseDates = _.map(data.Search, (movie) => {
+      return movie.Year;
     });
 
     const selectFieldProps = {
